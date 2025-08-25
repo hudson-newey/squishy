@@ -1,29 +1,3 @@
-/*
-const squishyProxy = {
-	get(target, prop, receiver) {
-		switch (prop) {
-			case "then":
-				return new Promise((res) => res(Squishy));
-
-			case Symbol.dispose:
-				return () => {};
-		}
-
-		return Squishy;
-	}
-};
-
-const Squishy = new Proxy(
-	// Use a "function" keyword so that we can use it as a function
-	// constructor.
-	// E.g. new Squishy()
-	function() { return Squishy },
-	squishyProxy,
-);
-
-export { Squishy };
-export default Squishy;
-*/
 const resolvedObjects = new WeakSet();
 const asyncResolver = Symbol("squishy-async-resolver");
 const disposeResolver = Symbol("squishy-dispose-resolver");
