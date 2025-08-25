@@ -1,0 +1,15 @@
+{
+  "name": "squishy",
+  "version": "1.0.0",
+  "description": "A squishy JavaScript object that can be anything. This is useful for mocks & testing",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite ."
+  },
+  "author": "hudson-newey",
+  "license": "MIT",
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
+}

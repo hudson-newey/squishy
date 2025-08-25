@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #222;
+				color: #fff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Hello</h1>
+
+		<script type="module">
+			import { Squishy } from "./index.js";
+
+			console.time("RUNNING")
+
+			console.log(Squishy);
+			console.log(Squishy.a);
+			console.log(Squishy.a.a.a.a);
+
+			console.log(Squishy.a().a.a);
+			console.log(Squishy.a().a().c.a().a.a);
+
+			console.log(Squishy.a(1, 2, ...Squishy).a().c.a().a.a);
+
+			console.log(...Squishy);
+			console.log(...Squishy());
+
+			for (const value of Squishy) {
+				console.log("Squishy value", value);
+			}
+
+			for (const value in Squishy) {
+				console.log("Squishy value", value);
+			}
+
+			console.log(await Squishy);
+			console.log(await await Squishy);
+			console.log(await Squishy.a);
+			console.log(await Squishy());
+			console.log(await Squishy().a);
+			console.log(await new Squishy());
+
+			using mySquishy = Squishy;
+			mySquishy().a()
+			mySquishy.a()
+
+			const MySquishyClass = new Squishy();
+			console.log(MySquishyClass().a);
+			console.log(MySquishyClass().abc());
+			console.log(new Squishy())
+			console.log(...new Squishy())
+
+			console.timeEnd("RUNNING");
+		</script>
+	</body>
+</html>
