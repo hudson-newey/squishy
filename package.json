@@ -4,12 +4,14 @@
   "description": "A squishy JavaScript object that can be anything. This is useful for mocks & testing",
   "main": "index.js",
   "scripts": {
-    "dev": "vite ."
+    "dev": "vite .",
+    "test": "vitest ."
   },
   "author": "hudson-newey",
   "license": "MIT",
   "packageManager": "pnpm@10.8.0",
   "devDependencies": {
-    "vite": "^7.1.3"
+    "vite": "^7.1.3",
+    "vitest": "^3.2.4"
   }
 }
